@@ -1,38 +1,38 @@
 package BEAN;
 public class Empresa {
-    private int IDEmpresa;
-    private String RazoSoci;
+    private int EmpresaID;
+    private String descEmpresa;
     private String RUC;
-    private String Direccion;
-    private String Telefono;
-    private int Estado;
+    private String contacto;
+    private String tlfConta;
+    private String web;
 
     public Empresa() {
     }
 
-    public Empresa(int IDEmpresa, String RazoSoci, String RUC, String Direccion, String Telefono, int Estado) {
-        this.IDEmpresa = IDEmpresa;
-        this.RazoSoci = RazoSoci;
+    public Empresa(int EmpresaID, String descEmpresa, String RUC, String contacto, String tlfConta, String web) {
+        this.EmpresaID = EmpresaID;
+        this.descEmpresa = descEmpresa;
         this.RUC = RUC;
-        this.Direccion = Direccion;
-        this.Telefono = Telefono;
-        this.Estado = Estado;
+        this.contacto = contacto;
+        this.tlfConta = tlfConta;
+        this.web = web;
     }
 
-    public int getIDEmpresa() {
-        return IDEmpresa;
+    public int getEmpresaID() {
+        return EmpresaID;
     }
 
-    public void setIDEmpresa(int IDEmpresa) {
-        this.IDEmpresa = IDEmpresa;
+    public void setEmpresaID(int EmpresaID) {
+        this.EmpresaID = EmpresaID;
     }
 
-    public String getRazoSoci() {
-        return RazoSoci;
+    public String getDescEmpresa() {
+        return descEmpresa;
     }
 
-    public void setRazoSoci(String RazoSoci) {
-        this.RazoSoci = RazoSoci;
+    public void setDescEmpresa(String descEmpresa) {
+        this.descEmpresa = descEmpresa;
     }
 
     public String getRUC() {
@@ -43,28 +43,28 @@ public class Empresa {
         this.RUC = RUC;
     }
 
-    public String getDireccion() {
-        return Direccion;
+    public String getContacto() {
+        return contacto;
     }
 
-    public void setDireccion(String Direccion) {
-        this.Direccion = Direccion;
+    public void setContacto(String contacto) {
+        this.contacto = contacto;
     }
 
-    public String getTelefono() {
-        return Telefono;
+    public String getTlfConta() {
+        return tlfConta;
     }
 
-    public void setTelefono(String Telefono) {
-        this.Telefono = Telefono;
+    public void setTlfConta(String tlfConta) {
+        this.tlfConta = tlfConta;
     }
 
-    public int getEstado() {
-        return Estado;
+    public String getWeb() {
+        return web;
     }
 
-    public void setEstado(int Estado) {
-        this.Estado = Estado;
+    public void setWeb(String web) {
+        this.web = web;
     }
     
     
