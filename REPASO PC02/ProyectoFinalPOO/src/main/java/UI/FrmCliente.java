@@ -371,25 +371,25 @@ public class FrmCliente extends javax.swing.JFrame {
         boolean sw = false;
         String cad = "";
         if(this.txtNombre.getText().isEmpty()) {
-        cad = "Debe registrar la descripcion";
+        cad = "Debe registrar el nombre";
         }
         if(this.txtApellido.getText().isEmpty()) {
-            cad += "\nDebe registrar la marca";
+            cad += "\nDebe registrar el apellido";
         }
         if(this.txtDireccion.getText().isEmpty()) {
-            cad += "\nDebe registrar el modelo";
+            cad += "\nDebe registrar la direccion";
         }
         if(this.txtTelefono.getText().isEmpty()) {
-            cad += "\nDebe registrar el color";
+            cad += "\nDebe registrar el telefono";
         }
         if(this.txtDni.getText().isEmpty()) {
-            cad += "\nDebe registrar el peso";
+            cad += "\nDebe registrar el DNI";
         }
         if(this.cmbGenero.getSelectedItem().toString().isEmpty()) {
-            cad += "\nDebe registrar el precio";
+            cad += "\nDebe seleccionar el genero";
         }
         if(this.cmbEstCivil.getSelectedItem().toString().isEmpty()) {
-            cad += "\nDebe registrar el proveedor";
+            cad += "\nDebe seleccionar el estado civil";
         }
         if(this.cmbEstado.getSelectedItem().toString().isEmpty()) {
             cad += "\nDebe seleccionar el estado";
