@@ -5,9 +5,9 @@ import UTIL.DbBean;
 import java.sql.ResultSet;
 import java.util.Vector;
 
-public class ClienteDAO {
+public class ClientesDAO {
 
-    public ClienteDAO() {
+    public ClientesDAO() {
     }
     
     public Vector<Cliente> listaClientes(String cad){
