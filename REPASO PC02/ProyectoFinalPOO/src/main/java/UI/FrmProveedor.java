@@ -90,7 +90,7 @@ public class FrmProveedor extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -124,14 +124,14 @@ public class FrmProveedor extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID Cliente", "Nombre", "Apellido", "Direccion", "Telefono", "DNI", "Genero", "Estado Civil", "Estado"
+                "ID Proveedor", "Nombre", "Nombre Contacto", "Direccion", "Ciudad", "Telefono", "Estado"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -334,9 +334,9 @@ public class FrmProveedor extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-    private void tblProveedoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblProveedoresMouseClicked
+    private void tblProveedoresMouseClicked(java.awt.event.MouseEvent evt) {                                            
         int idx; 
         idx = this.tblProveedores.getSelectedRow();
         this.idProv = Integer.parseInt(dtm.getValueAt(idx, 0).toString());
@@ -348,9 +348,9 @@ public class FrmProveedor extends javax.swing.JFrame {
         this.txtTelefono.setText(dtm.getValueAt(idx, 5).toString());
         this.cmbEstado.setSelectedItem(dtm.getValueAt(idx, 6).toString());
         this.btnGrabar.setText("Actualizar");
-    }//GEN-LAST:event_tblProveedoresMouseClicked
+    }                                           
 
-    private void btnGrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGrabarActionPerformed
+    private void btnGrabarActionPerformed(java.awt.event.ActionEvent evt) {                                          
         if(valida()==true) {
             Util util;
             util = new Util();
@@ -382,33 +382,63 @@ public class FrmProveedor extends javax.swing.JFrame {
             javax.swing.JOptionPane.showMessageDialog(this, msj);
             limpia();
         }
-    }//GEN-LAST:event_btnGrabarActionPerformed
+    }                                         
 
-    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {                                           
 
-    }//GEN-LAST:event_btnLimpiarActionPerformed
+    }                                          
 
-    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {                                         
         this.dispose();
-    }//GEN-LAST:event_btnSalirActionPerformed
+    }                                        
 
-    private void txtTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefonoActionPerformed
+    private void txtTelefonoActionPerformed(java.awt.event.ActionEvent evt) {                                            
 
-    }//GEN-LAST:event_txtTelefonoActionPerformed
+    }                                           
 
-    private void txtBuscarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBuscarKeyReleased
+    private void txtBuscarKeyReleased(java.awt.event.KeyEvent evt) {                                      
         if (txtBuscar.getText().isEmpty()) {
             this.llenaTblProveedores("");
         } else {
             this.llenaTblProveedores(this.txtBuscar.getText());
         }
-    }//GEN-LAST:event_txtBuscarKeyReleased
+    }                                     
 
     /**
      * @param args the command line arguments
      */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(FrmEmpresa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(FrmEmpresa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(FrmEmpresa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(FrmEmpresa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new FrmProveedor().setVisible(true);
+            }
+        });
+    }
+    // Variables declaration - do not modify                     
     private javax.swing.JButton btnGrabar;
     private javax.swing.JButton btnLimpiar;
     private javax.swing.JButton btnSalir;
@@ -432,5 +462,5 @@ public class FrmProveedor extends javax.swing.JFrame {
     private javax.swing.JTextField txtNombreContacto;
     private javax.swing.JTextField txtProveedorId;
     private javax.swing.JTextField txtTelefono;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 }
