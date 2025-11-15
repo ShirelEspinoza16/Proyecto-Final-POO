@@ -1,18 +1,18 @@
 package UI;
 
 import BEAN.Cliente;
-import DAO.ClienteDAO;
+import DAO.ClientesDAO;
 import UTIL.Util;
 import java.util.Vector;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class FrmCliente extends javax.swing.JFrame {
-    ClienteDAO clieDAO;
+    ClientesDAO clieDAO;
     DefaultTableModel dtm;
     int idClie;
     public FrmCliente() {
-        clieDAO = new ClienteDAO();
+        clieDAO = new ClientesDAO();
         initComponents();
         llenaCmbEstado();
         llenaCmbGenero();
