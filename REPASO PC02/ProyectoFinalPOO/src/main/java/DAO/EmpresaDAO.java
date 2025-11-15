@@ -18,19 +18,19 @@ public class EmpresaDAO {
         String sql;
         sql = "select * from Empresa";
         if(!cad.isEmpty()){
-            sql = sql + " where RazoSoci like '"+cad + "%' or RUC like '"+ cad +"%'";
+            sql = sql + " where descEmpresa like '"+cad + "%' or RUC like '"+ cad +"%'";
         }
         try{
             ResultSet result;
             result = con.resultadoSQL(sql);
             while (result.next()){
                 Empresa emp = new Empresa();
-                emp.setIDEmpresa(result.getInt(1));
-                emp.setRazoSoci(result.getString(2));
+                emp.setEmpresaID(result.getInt(1));
+                emp.setDescEmpresa(result.getString(2));
                 emp.setRUC(result.getString(3));
-                emp.setDireccion(result.getString(4));
-                emp.setTelefono(result.getString(5));
-                emp.setEstado(result.getInt(6));
+                emp.setContacto(result.getString(4));
+                emp.setTlfConta(result.getString(5));
+                emp.setWeb(result.getString(6));
                 listaEmpresas.addElement(emp);
             }
         }catch(java.sql.SQLException e){
@@ -49,12 +49,12 @@ public class EmpresaDAO {
         String sql;
         try{
             sql = "insert into Empresa values( ";
-            sql += ""+ emp.getIDEmpresa() +", ";
-            sql += "'"+ emp.getRazoSoci() +"', ";
+            sql += ""+ emp.getEmpresaID() +", ";
+            sql += "'"+ emp.getDescEmpresa() +"', ";
             sql += "'"+ emp.getRUC() +"', ";
-            sql += "'"+ emp.getDireccion() +"', ";
-            sql += "'"+ emp.getTelefono() +"', ";
-            sql += ""+ emp.getEstado() +") ";
+            sql += "'"+ emp.getContacto() +"', ";
+            sql += "'"+ emp.getTlfConta() +"', ";
+            sql += "'"+ emp.getWeb() +"') ";
             con.ejecutaSQL(sql);
         }catch (java.sql.SQLException e) {
             e.printStackTrace();
@@ -71,12 +71,12 @@ public class EmpresaDAO {
         String sql;
         try{
             sql = "update Empresa set ";
-            sql += "RazoSoci = '"+ emp.getRazoSoci() +"', ";
+            sql += "descEmpresa = '"+ emp.getDescEmpresa() +"', ";
             sql += "RUC = '"+ emp.getRUC() +"', ";
-            sql += "Direccion = '"+ emp.getDireccion() +"', ";
-            sql += "Telefono = '"+ emp.getTelefono() +"', ";
-            sql += "Estado = "+ emp.getEstado() +" ";
-            sql += " where IDEmpresa = "+ emp.getIDEmpresa() +"";
+            sql += "contacto = '"+ emp.getContacto() +"', ";
+            sql += "tlfConta = '"+ emp.getTlfConta() +"', ";
+            sql += "web = '"+ emp.getWeb() +"' ";
+            sql += " where EmpresaID = "+ emp.getEmpresaID() +"";
             con.ejecutaSQL(sql);
         }catch (java.sql.SQLException e) {
             e.printStackTrace();
