@@ -21,7 +21,7 @@ public class FrmCliente extends javax.swing.JFrame {
         llenaTblClientes("");
     }
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -293,7 +293,7 @@ public class FrmCliente extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
     private void llenaCmbEstado (){
         this.cmbEstado.addItem("");
@@ -402,18 +402,18 @@ public class FrmCliente extends javax.swing.JFrame {
         return sw;
     }
     
-    private void txtDniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDniActionPerformed
-    }//GEN-LAST:event_txtDniActionPerformed
+    private void txtDniActionPerformed(java.awt.event.ActionEvent evt) {                                       
+    }                                      
 
-    private void txtBuscarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBuscarKeyReleased
+    private void txtBuscarKeyReleased(java.awt.event.KeyEvent evt) {                                      
         if (txtBuscar.getText().isEmpty()) {
             this.llenaTblClientes("");
         } else {
             this.llenaTblClientes(this.txtBuscar.getText());
         }
-    }//GEN-LAST:event_txtBuscarKeyReleased
+    }                                     
 
-    private void btnGrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGrabarActionPerformed
+    private void btnGrabarActionPerformed(java.awt.event.ActionEvent evt) {                                          
         if(valida()==true) {
             Util util;
             util = new Util();
@@ -461,9 +461,9 @@ public class FrmCliente extends javax.swing.JFrame {
             javax.swing.JOptionPane.showMessageDialog(this, msj);
             limpia();
         }
-    }//GEN-LAST:event_btnGrabarActionPerformed
+    }                                         
 
-    private void tblClientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblClientesMouseClicked
+    private void tblClientesMouseClicked(java.awt.event.MouseEvent evt) {                                         
         int idx; 
         idx = this.tblClientes.getSelectedRow();
         this.idClie = Integer.parseInt(dtm.getValueAt(idx, 0).toString());
@@ -477,22 +477,52 @@ public class FrmCliente extends javax.swing.JFrame {
         this.cmbEstCivil.setSelectedItem(dtm.getValueAt(idx, 7).toString());
         this.cmbEstado.setSelectedItem(dtm.getValueAt(idx, 8).toString());
         this.btnGrabar.setText("Actualizar");
-    }//GEN-LAST:event_tblClientesMouseClicked
+    }                                        
 
-    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {                                           
         limpia();
-    }//GEN-LAST:event_btnLimpiarActionPerformed
+    }                                          
 
-    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {                                         
         this.dispose();
-    }//GEN-LAST:event_btnSalirActionPerformed
+    }                                        
 
     /**
      * @param args the command line arguments
      */
-    
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(FrmEmpresa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(FrmEmpresa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(FrmEmpresa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(FrmEmpresa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new FrmCliente().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify                     
     private javax.swing.JButton btnGrabar;
     private javax.swing.JButton btnLimpiar;
     private javax.swing.JButton btnSalir;
@@ -520,5 +550,5 @@ public class FrmCliente extends javax.swing.JFrame {
     private javax.swing.JTextField txtDni;
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtTelefono;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 }
